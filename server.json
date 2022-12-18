@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Wooden Table",
+        "price": 300,
+        "picture": "https://cdn.decoist.com/wp-content/uploads/2017/03/Wooden-dining-table-top-adds-elegance-and-textural-beauty-to-the-dining-room.jpg"
+    },
+    {
+        "name": "Electric Drill",
+        "price": 100,
+        "picture": "https://cdn.shopify.com/s/files/1/0016/5032/7651/products/fd_1024x1024.jpg?v=1570589857"
+    },
+    {
+        "name": "Bed",
+        "price": 500,
+        "picture": "https://www.boconcept.com/on/demandware.static/-/Sites-master-catalog/default/dw0b805ada/images/1220000/1223156.jpg"
+    },
+    {
+        "name": "Sofa",
+        "price": 320,
+        "picture": "https://www.boconcept.com/on/demandware.static/-/Sites-master-catalog/default/dwd78307a1/images/160000/160183.jpg"
+    },
+    {
+        "name": "Samsung Television",
+        "price": 600,
+        "picture": "https://images.samsung.com/is/image/samsung/ph-qledtv-q60t-qa50q60tagxxp-lperspectiveblack-225892991?$720_576_PNG$"
+    },
+    {
+        "name": "Wooden Closet",
+        "price": 275,
+        "picture": "https://i.pinimg.com/originals/c2/83/6f/c2836fe683b2af31300331695f51be0c.jpg"
+    },
+    {
+        "name": "Electric Nail Gun",
+        "price": 105,
+        "picture": "https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,h_337,q_auto,w_600/c_pad,h_337,w_600/R1449886-01?pgw=1"
+    },
+    {
+        "name": "10'Wide Plank 4 feet",
+        "price": 20,
+        "picture": "https://sc04.alicdn.com/kf/UTB8AAy.oHnJXKJkSahGq6xhzFXaP.jpg"
+    },
+    {
+        "name": "Roomba",
+        "price": 225,
+        "picture": "https://cdn.vox-cdn.com/thumbor/8jV10mdym-UDXEnrVmpSbYpyRu4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13147673/dseifert_180924_2969_0039.jpg"
+    }
+]

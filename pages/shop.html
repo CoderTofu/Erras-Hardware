@@ -3,19 +3,106 @@
 <head>
     <title>Shop</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/shop.css">
 </head>
+<script defer src="../js/shop.js"></script>
 <body>
-    <header>
+    <header style="position: sticky;">
         <a href="./index.html" class="logo-name">
-            <img src="../pictures/general_photos/site_logo.png" alt="site logo">
+            <img src="../imgs/general_photos/site_logo.png" alt="site logo">
             <h1>Erras</h1>
         </a>
         <div class="site-links">
             <a href="./index.html">Home</a>
             <a href="./contact_us.html">Contact Us</a>
             <a href="./shop.html">Shop</a>
-            <a href="./cart.html"><img height="25px" src="../pictures/general_photos/cart.png" alt="cart"></a>
+            <a href="./cart.html"><img height="25px" src="../imgs/general_photos/cart.png" alt="cart"></a>
         </div>
     </header>
+
+    <main>
+        <table id="products">
+            <tr class="product-row">
+                <td class="product">
+                    <img src="https://cdn.decoist.com/wp-content/uploads/2017/03/Wooden-dining-table-top-adds-elegance-and-textural-beauty-to-the-dining-room.jpg" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Wooden Table</h3>
+                        <p>Php 7,120</p>
+                        <button onclick="main('wte')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://cdn.shopify.com/s/files/1/0016/5032/7651/products/fd_1024x1024.jpg?v=1570589857" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Electric Drill</h3>
+                        <p>Php 8,399</p>
+                        <button onclick="main('edl')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://www.boconcept.com/on/demandware.static/-/Sites-master-catalog/default/dw0b805ada/images/1220000/1223156.jpg" alt="Picture of an item"">
+                    <div class="details">
+                        <h3>Full Set Bed</h3>
+                        <p>Php 12,350</p>
+                        <button onclick="main('fsbd')">Add to cart</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="product-row">
+                <td class="product">
+                    <img src="https://www.boconcept.com/on/demandware.static/-/Sites-master-catalog/default/dwd78307a1/images/160000/160183.jpg" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Sofa</h3>
+                        <p>Php 17,999</p>
+                        <button onclick="main('sa')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://images.samsung.com/is/image/samsung/ph-qledtv-q60t-qa50q60tagxxp-lperspectiveblack-225892991?$720_576_PNG$" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Samsung Television</h3>
+                        <p>Php 34,579</p>
+                        <button onclick="main('stn')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://i.pinimg.com/originals/c2/83/6f/c2836fe683b2af31300331695f51be0c.jpg" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Wooden Closet</h3>
+                        <p>Php 18,199</p>
+                        <button onclick="main('wct')">Add to cart</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="product-row">
+                <td class="product">
+                    <img src="https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,h_337,q_auto,w_600/c_pad,h_337,w_600/R1449886-01?pgw=1"" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Electric Nail Gun</h3>
+                        <p>Php 9,619</p>
+                        <button onclick="main('engn')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://sc04.alicdn.com/kf/UTB8AAy.oHnJXKJkSahGq6xhzFXaP.jpg" alt="Picture of an item">
+                    <div class="details">
+                        <h3>10'Wide Plank 4 feet</h3>
+                        <p>Php 1,356</p>
+                        <button onclick="main('wpft')">Add to cart</button>
+                    </div>
+                </td>
+                <td class="product">
+                    <img src="https://cdn.vox-cdn.com/thumbor/8jV10mdym-UDXEnrVmpSbYpyRu4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13147673/dseifert_180924_2969_0039.jpg" alt="Picture of an item">
+                    <div class="details">
+                        <h3>Roomba</h3>
+                        <p>Php 11,729</p>
+                        <button onclick="main('ra')">Add to cart</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer></footer>
 </body>
 </html>
