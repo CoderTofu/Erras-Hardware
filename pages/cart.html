@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <title>Cart</title>
-    <script src="../js/cart.js" defer></script>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/cart.js" type="module" defer></script>
 </head>
 <body>
     <header style="position: sticky;">
@@ -25,10 +26,38 @@
 
             </div>
         </div>
-        <div id="information-container">
-            <h2>Personal Information</h2>
-            <div id="info-container">
-                
+        <div id="right-side">
+            <div id="information-container">
+                <h2>Personal Information</h2>
+                <div id="info-container">
+                    <form>
+                        <div>
+                            <!-- Name -->
+                            <label for="name">Name: </label>
+                            <input name="name" type="text">
+                        </div>
+                        <div>
+                            <!-- Phone Number -->
+                            <label for="number">Phone Number: </label>
+                            <input name="number" type="text">
+                        </div>
+                        <div>
+                            <!-- Email Address -->
+                            <label for="email">Email: </label>
+                            <input name="email" type="email">
+                        </div>
+                        <div>
+                            <!-- Address -->
+                            <label for="address">Address: </label>
+                            <input name="address" type="text">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div id="checkout">
+                    <button>Checkout Items</button>
+                </div>
             </div>
         </div>
     </main>

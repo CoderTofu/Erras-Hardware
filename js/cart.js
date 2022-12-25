@@ -1,3 +1,6 @@
+import ItemDetail from "./itemDetail.js";
+import ItemForm from "./itemForm.js";
+
 const CART_CONTAINER = document.getElementById("items-container");
 const INFO_CONTAINER = document.getElementById("info-container");
 const localStorage = window.localStorage;
@@ -21,19 +24,22 @@ if (userInfo === null) {
 
 function makeCartList() {
     let cart = JSON.parse(localStorage.getItem("erras_cart"));
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         let itemContainer = document.createElement("div");
-
-        let itemDetail = document.createElement("div");
-        let itemImg = document.createElement("img");
-        let itemName = document.createElement("h3");
-        let itemPrice = document.createElement("h4");
-        
-        let itemForm = document.createElement("form");
-        let itemAmountTextInput = document.createElement("input");
-        let itemAmountAdd = document.createElement("button");
-        let itemAmountRemove = document.createElement("button");
-
+        let itemDetail = ItemDetail(item, index);
+        let itemForm = ItemForm(item);
         let itemRemoveBtn = document.createElement("button");
+        itemRemoveBtn.textContent = "DELETE";
+
+        itemContainer.appendChild(itemDetail);
+        itemContainer.appendChild(itemForm);
+        itemContainer.appendChild(itemRemoveBtn);
+
+        CART_CONTAINER.appendChild(itemContainer);
     });
+}
+
+function makeForm() {
+    let container = document.createElement("form");
+
 }
