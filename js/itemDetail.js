@@ -30,7 +30,6 @@ export default function ItemDetail(item, index) {
             })
         }
         localStorage.setItem("v_items", JSON.stringify(parsed_items));
-        verified_items = localStorage.getItem("v_items");
     }
 
     itemImg.src = item.picture;
@@ -38,10 +37,16 @@ export default function ItemDetail(item, index) {
     itemName.textContent = item.name;
     itemPrice.textContent = priceFormat.format(item.price);
 
+    let mainDetail = document.createElement("div");
+    mainDetail.appendChild(itemName);
+    mainDetail.appendChild(itemPrice);
+
     container.appendChild(check);
     container.appendChild(itemImg);
-    container.appendChild(itemName);
-    container.appendChild(itemPrice);
+    container.appendChild(mainDetail);
+
+    container.classList.add("item-detail");
+    mainDetail.classList.add("main-detail")
 
     return container;
 }

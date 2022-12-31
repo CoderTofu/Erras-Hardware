@@ -4,7 +4,9 @@
     <title>Cart</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="icon" href="../imgs/general_photos/site_logo.png">
     <script src="../js/cart.js" type="module" defer></script>
+    <script src="../js/info.js" type="module" defer></script>
 </head>
 <body>
     <header style="position: sticky;">
@@ -26,38 +28,38 @@
 
             </div>
         </div>
-        <div id="right-side">
-            <div id="information-container">
-                <h2>Personal Information</h2>
-                <div id="info-container">
-                    <form>
-                        <div>
-                            <!-- Name -->
-                            <label for="name">Name: </label>
-                            <input name="name" type="text">
-                        </div>
-                        <div>
-                            <!-- Phone Number -->
-                            <label for="number">Phone Number: </label>
-                            <input name="number" type="text">
-                        </div>
-                        <div>
-                            <!-- Email Address -->
-                            <label for="email">Email: </label>
-                            <input name="email" type="email">
-                        </div>
-                        <div>
-                            <!-- Address -->
-                            <label for="address">Address: </label>
-                            <input name="address" type="text">
-                        </div>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-
-                <div id="checkout">
-                    <button>Checkout Items</button>
-                </div>
+        <div id="information-container">
+            <h2>Personal Information</h2>
+            <div id="info-container">
+                <form>
+                    <div class="contact-input">
+                        <!-- Name -->
+                        <label for="name">Name: </label>
+                        <input id="name" name="name" type="text">
+                    </div>
+                    <div class="contact-input">
+                        <!-- Phone Number -->
+                        <label for="number">Phone Number: </label>
+                        <input id="number" name="number" type="text">
+                    </div>
+                    <div class="contact-input">
+                        <!-- Card Number -->
+                        <label for="card-number">Card Number: </label>
+                        <input id="card-number" name="card-number" type="text">
+                    </div>
+                    <div class="contact-input">
+                        <!-- Email Address -->
+                        <label for="email">Email: </label>
+                        <input id="email" name="email" type="email">
+                    </div>
+                    <div class="contact-input">
+                        <!-- Address -->
+                        <label for="address">Address: </label>
+                        <input id="address" name="address" type="text">
+                    </div>
+                    <button id="cart-submit" type="submit">Check Out!</button>
+                </form>
+            </div>
             </div>
         </div>
     </main>

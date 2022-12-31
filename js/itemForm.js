@@ -1,31 +1,36 @@
 export default function ItemForm(item) {
     let container = document.createElement("form");
-    let itemAmountTextInput = document.createElement("input");
+    let itemAmountTextInput = document.createElement("h3");
     let itemAmountAdd = document.createElement("button");
-    let itemAmountRemove = document.createElement("button");
+    let itemAmountDeduct = document.createElement("button");
 
-    itemAmountTextInput.value = item.amount;
+    itemAmountTextInput.textContent = item.amount;
     itemAmountTextInput.type = "number";
 
     itemAmountAdd.type = "button";
     itemAmountAdd.textContent = "+";
     itemAmountAdd.addEventListener("click", () => {
         item.amount++;    
-        itemAmountTextInput.value = item.amount;
+        itemAmountTextInput.textContent = item.amount;
         changeAmount(item);
     });
 
-    itemAmountRemove.type = "button";
-    itemAmountRemove.textContent = "-";
-    itemAmountRemove.addEventListener("click", () => {
+    itemAmountDeduct.type = "button";
+    itemAmountDeduct.textContent = "-";
+    itemAmountDeduct.addEventListener("click", () => {
+        if (item.amount === 1) return
         item.amount--;    
-        itemAmountTextInput.value = item.amount;
+        itemAmountTextInput.textContent = item.amount;
         changeAmount(item);
     });
 
-    container.appendChild(itemAmountAdd);
+    container.appendChild(itemAmountDeduct);
     container.appendChild(itemAmountTextInput);
-    container.appendChild(itemAmountRemove);
+    container.appendChild(itemAmountAdd);
+
+    container.classList.add("amount-input");
+    itemAmountAdd.classList.add("amount-btn");
+    itemAmountDeduct.classList.add("amount-btn");
 
     return container;
 }

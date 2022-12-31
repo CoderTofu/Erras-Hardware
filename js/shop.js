@@ -96,6 +96,7 @@ function addToList(id) {
     else {
         itemDetail = CatalogueDetail;
         itemDetail.amount = amount;
+        cart.push(itemDetail);
     }
 
     // This is to check kung binabawasan ba ng user yung amount ng item
@@ -116,7 +117,6 @@ function addToList(id) {
     }
     
     // Added na siya sa cart yey!
-    cart.push(itemDetail);
     localStorage.setItem("erras_cart", JSON.stringify(cart));
     list = localStorage.getItem("erras_cart");
 }
