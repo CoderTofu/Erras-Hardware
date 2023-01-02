@@ -1,3 +1,6 @@
+// This file is para sa pagloload ng mga items sa cart page.
+// May dalawang main functions na naseperate sa file na to para mas malinis tignan
+
 import ItemDetail from "./itemDetail.js";
 import ItemForm from "./itemForm.js";
 
@@ -5,8 +8,8 @@ const CART_CONTAINER = document.getElementById("items-container");
 const localStorage = window.localStorage;
 
 let list = localStorage.getItem("erras_cart");
-let userInfo = localStorage.getItem("erras_user_info");
 
+// Check whether may laman ba cart
 if (list === null || list == "[]") {
     let NoItemsHeader = document.createElement("h3");
     NoItemsHeader.textContent = "Your cart is empty.";
@@ -19,6 +22,8 @@ if (list === null || list == "[]") {
 function makeCartList() {
     CART_CONTAINER.innerHTML = "";
     let cart = JSON.parse(localStorage.getItem("erras_cart"));
+    // For each item sa cart gumawa nung parang list type sa html na may details and form
+    // Hence: itemDetail and itemForm
     cart.forEach((item, index) => {
         let itemContainer = document.createElement("div");
         let itemDetail = ItemDetail(item, index);
@@ -39,6 +44,7 @@ function makeCartList() {
     });
 }
 
+// This function is made para tanggalin yung item sa cart
 function itemRemove(cart, itemDetail) {
     cart.filter((item, index, arr) => {
         if (item.id === itemDetail.id) {

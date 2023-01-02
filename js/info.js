@@ -1,3 +1,6 @@
+// This file is para sa user information na gagamitin sa pag-checkout ng cart
+// At yung mismong pag=checkout ng items
+
 const localStorage = window.localStorage;
 
 // Values of input
@@ -41,7 +44,7 @@ submitBtn.addEventListener("click", (e) => {
     if (nameElement.value === "" || numberElement.value === "" ||
         cardElement.value === "" || emailElement.value === "" ||
         addressElement.value === "") {
-            alert("Please complete the information form first");
+            alert("Please complete the information form first.");
     } else {
         let totalPrice = totalPricing(indexArray, itemArray);
         let info = {
@@ -80,7 +83,7 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 function totalPricing(indexArray, itemArray) {
-    let msgSTR = "Item Confirmation (Y/N):"
+    let msgSTR = "Item Confirmation [Y/N]:"
     let total = 0;
     indexArray.map(index => {
         msgSTR += `

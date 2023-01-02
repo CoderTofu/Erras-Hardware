@@ -1,3 +1,7 @@
+// Second Stage ng cart.js
+// Is para sa function ng pagpress ng buttons sa item na nasa cart 
+// to control their quantity.
+
 export default function ItemForm(item) {
     let container = document.createElement("form");
     let itemAmountTextInput = document.createElement("h3");

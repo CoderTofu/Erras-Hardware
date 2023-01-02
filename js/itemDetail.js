@@ -1,3 +1,7 @@
+// Second Stage ng cart.js
+// Is para sa pag generate nung mga details nung item na nasa cart
+// This includes: name, price, and images
+
 const localStorage = window.localStorage;
 // Always start with no items in the array
 localStorage.setItem("v_items", "[]");

@@ -1,3 +1,5 @@
+// This file is para sa pseudo messaging para sa contact page.
+
 const firstNameElement = document.getElementById("fname");
 const lastNameElement = document.getElementById("lname");
 const emailElement = document.getElementById("email");

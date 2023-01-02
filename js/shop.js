@@ -1,3 +1,7 @@
+// Para sa shop.html
+// This file is used for the onclick event sa button pag gustong
+// mag add to cart ng user
+
 const ITEMS = [
     {
         "id": "wte",
@@ -90,7 +94,7 @@ function addToList(id) {
     if (isInCart) {
         itemDetail = cart.find(x => x.id === id);
         itemDetail.amount += amount;
-        alert(`Item "${CatalogueDetail.name}" is already in cart now with an amount of ${itemDetail.amount}.`);
+        alert(`Adding ${amount} more to your cart.\nYou now have ${itemDetail.amount} in your cart.`);
     } 
     // Else initialize mo pa muna sa CatalogueDetail then dagdag properties for amount
     else {
