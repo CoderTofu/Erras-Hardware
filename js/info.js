@@ -1,6 +1,8 @@
 // This file is para sa user information na gagamitin sa pag-checkout ng cart
 // At yung mismong pag=checkout ng items
 
+let bodyElement = document.querySelector("body");
+
 const localStorage = window.localStorage;
 
 // Values of input
@@ -55,24 +57,20 @@ submitBtn.addEventListener("click", (e) => {
             address: addressElement.value
         }
         alert("Please confirm the following:")
-        let priceConfirm = prompt(`${totalPrice}`);
+        let priceConfirm = prompt(`Total Price: ${totalPrice[0]}`);
         if (priceConfirm === "Y" || priceConfirm === "YES" || priceConfirm === "y" || priceConfirm === "yes") {
             let confirm = prompt(
-                `Is the information provided correct? [Y/N]:\n
-                Name: ${info.name}\n
-                Address: ${info.address}\n
-                Card Number: ${info.card}\n
-                Email: ${info.email}\n
-                Phone Number: ${info.number}`
+                `Is the information provided correct? [Y/N]:\n\nName: ${info.name}\n\nAddress: ${info.address}\n\nCard Number: ${info.card}\n\nEmail: ${info.email}\n\nPhone Number: ${info.number}\n`
                 );
             if (confirm === "Y" || confirm === "y" || confirm === "YES" || confirm === "yes") {
                 localStorage.setItem("userInfo", JSON.stringify(info));
-                let fMessage = `Item will be shipped to ${info.name} at ${info.address} and the billing would be processed at ${info.card}.`
+                let fMessage = `Item will be shipped to ${info.name} at ${info.address}.\nThe billing would be processed at ${info.card}.`
                 let sMessage = `Please wait for further confirmation at your email ${info.email} and number ${info.number}.`
                 alert(fMessage);
                 alert(sMessage);
                 newCart(indexArray, itemArray);
-                location.reload();
+                receipt(info, totalPrice[1]);
+                // location.reload();
             } else {
                 alert("Action Cancelled");
             }
@@ -93,8 +91,8 @@ function totalPricing(indexArray, itemArray) {
         `
         total += itemArray[index].price * itemArray[index].amount;
     })
-    msgSTR += `\n\nTotal Price: ${total}`
-    return msgSTR
+    msgSTR += `\n\nTotal Price: ${total} + 50.00 shipping fee`
+    return [msgSTR, total]
 }
 
 function newCart(indexArray, itemArray) {
@@ -107,4 +105,32 @@ function newCart(indexArray, itemArray) {
     console.log(newArray)
     localStorage.setItem("erras_cart", JSON.stringify(newArray));
     localStorage.setItem("v_items", "[]");
+}
+
+function receipt(info, price) {
+    let refNum = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
+    let priceFormat = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'PHP'
+    });
+    let receiptContainer = document.createElement("div");
+    receiptContainer.innerHTML = `
+        <div id="receipt">
+            <h1>Ref number: 0 n${refNum}</h1>
+            <div class="logo-receipt-container">
+                <img src="../imgs/general_photos/site_logo.png" alt="cart">
+            </div>
+            <p>Total Value Charged: ${priceFormat.format(price + 50)}</p>
+            <p>Item will be shipped to ${info.name} at ${info.address}.</p> 
+            <p>Billing would be processed at ${info.card}.</p>
+            <br>
+            <p>Customer: ${info.name}</p>
+            <p>Phone Number: ${info.number}</p>
+            <p>Billed at Card No: ${info.card}</p>
+            <p>Email: ${info.email}</p>
+            <button onclick="location.reload()">Confirm!</button>
+        </div>
+    `
+    receiptContainer.classList.add("overlay")
+    bodyElement.append(receiptContainer)
 }

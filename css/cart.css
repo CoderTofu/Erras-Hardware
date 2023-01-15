@@ -186,3 +186,53 @@ button:hover {
     background-color: #cfcfcf;
     border: 1px solid rgb(226, 226, 226);
 }
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 800px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#receipt {
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+    font: var(--text-font);
+    padding: 2em;
+}
+
+#receipt h1 {
+    font-size: 30px;
+    width: 100%;
+    border-bottom: #000 solid 1px;
+}
+
+#receipt p {
+    margin-top: .5rem;
+    font-size: 16px;
+}
+
+#receipt button {
+    cursor: pointer;
+    font: var(--text-font);
+    margin-top: 1rem;
+    padding: .6rem 1.2rem;
+    font-size: 16px;
+}
+
+.logo-receipt-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-receipt-container img {
+    height: 100px;
+}

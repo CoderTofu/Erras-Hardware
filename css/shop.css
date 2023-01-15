@@ -52,3 +52,9 @@ main {
     height: 300px;
     border-bottom: 1px solid #444444;
 }
+
+aside {
+    text-align: center;
+    font-size: .8rem;
+    margin-top: .5rem;
+}

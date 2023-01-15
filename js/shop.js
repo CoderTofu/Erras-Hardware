@@ -1,7 +1,6 @@
 // Para sa shop.html
 // This file is used for the onclick event sa button pag gustong
 // mag add to cart ng user
-
 const ITEMS = [
     {
         "id": "wte",
